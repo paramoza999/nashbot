@@ -1,0 +1,9 @@
+/home/param/nash_ws/build/nashbot/CMakeFiles/uninstall.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/nashbot_uninstall.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/test.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/edit_cache.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/rebuild_cache.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/list_install_components.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/install.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/install/local.dir
+/home/param/nash_ws/build/nashbot/CMakeFiles/install/strip.dir

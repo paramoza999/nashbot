@@ -1,0 +1,6 @@
+Invoking command in '/home/param/nash_ws/build/nashbot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/param/nash_ws/src/nashbot -DCMAKE_INSTALL_PREFIX=/home/param/nash_ws/install/nashbot
+Invoked command in '/home/param/nash_ws/build/nashbot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/param/nash_ws/src/nashbot -DCMAKE_INSTALL_PREFIX=/home/param/nash_ws/install/nashbot
+Invoking command in '/home/param/nash_ws/build/nashbot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/param/nash_ws/build/nashbot -- -j32 -l32
+Invoked command in '/home/param/nash_ws/build/nashbot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/param/nash_ws/build/nashbot -- -j32 -l32
+Invoking command in '/home/param/nash_ws/build/nashbot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/param/nash_ws/build/nashbot
+Invoked command in '/home/param/nash_ws/build/nashbot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/param/nash_ws/build/nashbot

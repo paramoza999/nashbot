@@ -1,0 +1,7 @@
+{
+    "documentId": "1a729157d32a9faa6e1b0b1e",
+    "outputFormat": "urdf",
+    "packageName": "nashbot/description",
+    "robotName": "nashbot",
+    "assemblyName": "nashbotv1.0"
+  }

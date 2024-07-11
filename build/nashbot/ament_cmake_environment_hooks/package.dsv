@@ -1,0 +1,4 @@
+source;share/nashbot/local_setup.bash
+source;share/nashbot/local_setup.dsv
+source;share/nashbot/local_setup.sh
+source;share/nashbot/local_setup.zsh

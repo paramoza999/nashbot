@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "1a729157d32a9faa6e1b0b1e",
+    "documentMicroversion": "b25dd46e31bf647077afdf14",
+    "elementId": "34f4a5a892c3f1f0f9df6a45",
+    "fullConfiguration": "default",
+    "id": "MTwYm90CgUu7si+WT",
+    "isStandardContent": false,
+    "name": "link_wrist_base_bearing <7>",
+    "partId": "JRD",
+    "suppressed": false,
+    "type": "Part"
+}

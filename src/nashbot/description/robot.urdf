@@ -1,0 +1,1073 @@
+<?xml version="1.0"?>
+<robot name="nashbot">
+<link name="link_lead_screw">
+<visual>
+<origin xyz="-0.028031642234836610938 -0.13539226875249418813 0.080270123761849734856" rpy="-1.3877791116502955134e-17 -4.5818937591147125869e-16 1.5707963267948921171" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lead_screw.stl"/>
+</geometry>
+<material name="link_lead_screw_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.028031642234836610938 -0.13539226875249418813 0.080270123761849734856" rpy="-1.3877791116502955134e-17 -4.5818937591147125869e-16 1.5707963267948921171" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lead_screw.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.028031642234836607469 -0.13539226875249418813 0.093449700991282219631" rpy="0 0 0"/>
+<mass value="0.044274795134269594177" />
+<inertia ixx="5.9007712889422220178e-06" ixy="2.6406508355513240935e-20"  ixz="1.0916475297711825399e-21" iyy="5.9007712889422643694e-06" iyz="2.383841110744119013e-21" izz="3.8410252887780899555e-06" />
+</inertial>
+</link>
+
+<link name="link_arm_mount_base">
+<visual>
+<origin xyz="0.10500000000000002387 -0.18000000000000002109 -0.009999999999999995004" rpy="0 -1.5407439555097886824e-33 1.155557966632338946e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm_mount_base.stl"/>
+</geometry>
+<material name="link_arm_mount_base_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.10500000000000002387 -0.18000000000000002109 -0.009999999999999995004" rpy="0 -1.5407439555097886824e-33 1.155557966632338946e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm_mount_base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.035003417238566120195 -0.080546758170579269009 -0.0049999999999999948999" rpy="0 0 0"/>
+<mass value="0.3476241705557227557" />
+<inertia ixx="0.0011542363387682392627" ixy="-9.5682679851351687815e-08"  ixz="1.7783826621869134124e-36" iyy="0.00057171713853165870723" iyz="-1.4742251062794835887e-40" izz="0.0017201597411239694536" />
+</inertial>
+</link>
+
+<link name="link_lead_screw_2">
+<visual>
+<origin xyz="0 0 -0.0019999999999999878986" rpy="0 -1.232595164407830946e-32 -1.1555579666312777087e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lead_screw.stl"/>
+</geometry>
+<material name="link_lead_screw_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 -0.0019999999999999878986" rpy="0 -1.232595164407830946e-32 -1.1555579666312777087e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lead_screw.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-3.3480423142111705257e-19 8.409802983138248567e-19 0.011179577229432420549" rpy="0 0 0"/>
+<mass value="0.044274795134269594177" />
+<inertia ixx="5.9007712889420881866e-06" ixy="2.1463470860522140012e-36"  ixz="7.2732621570265817115e-38" iyy="5.9007712889420881866e-06" iyz="-8.4046760289498575363e-71" izz="3.8410252887780425217e-06" />
+</inertial>
+</link>
+
+<joint name="slider_bearing2" type="fixed">
+<origin xyz="0.068999999999999991895 -2.7755575615628913511e-17 -1.3877787807814456755e-17" rpy="3.4773505634435970465e-16 3.8210450096641918546e-31 1.570796326794896558" />
+<parent link="link_arm_mount_base" />
+<child link="link_lead_screw_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="link_arm1">
+<visual>
+<origin xyz="0 4.336808689942017736e-18 0" rpy="3.141592653589793116 -0 -3.8518598887850806576e-34" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1.stl"/>
+</geometry>
+<material name="link_arm1_material">
+<color rgba="0.37254901960784314596 0.65490196078431373028 0.23921568627450981448 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 4.336808689942017736e-18 0" rpy="3.141592653589793116 -0 -3.8518598887850806576e-34" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-1.826200395753655804e-18 -1.9810815873615450422e-18 -0.012500000000000014572" rpy="0 0 0"/>
+<mass value="0.065384397102838151539" />
+<inertia ixx="0.0001525524414595170531" ixy="-3.1957421044861659131e-36"  ixz="0" iyy="0.00015255244145951699889" iyz="0" izz="0.00029829400822082170188" />
+</inertial>
+</link>
+
+<link name="link_arm1_base">
+<visual>
+<origin xyz="-0.24892457063198081268 -4.336808689942017736e-18 -0.014999999999999999445" rpy="0 -0 1.1555579666297065507e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1_base.stl"/>
+</geometry>
+<material name="link_arm1_base_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.24892457063198081268 -4.336808689942017736e-18 -0.014999999999999999445" rpy="0 -0 1.1555579666297065507e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1_base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.067724570631980812729 2.0005385637791788029e-18 -0.0075000000000000066613" rpy="0 0 0"/>
+<mass value="0.039230638261702789615" />
+<inertia ixx="9.0223776933653459771e-05" ixy="1.5004659150170553936e-35"  ixz="0" iyy="9.0223776933653419114e-05" iyz="0" izz="0.00017897640493249301571" />
+</inertial>
+</link>
+
+<link name="link_arm1_bearing">
+<visual>
+<origin xyz="-0.46200000000000002176 0 -0.024999999999999994449" rpy="0 -0 -5.5511151231258924031e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1_bearing.stl"/>
+</geometry>
+<material name="link_arm1_bearing_material">
+<color rgba="0.2313725490196078538 0.38039215686274507888 0.7058823529411765163 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.46200000000000002176 0 -0.024999999999999994449" rpy="0 -0 -5.5511151231258924031e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1_bearing.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 -1.9777191443802205579e-17 -0.012500000000000011102" rpy="0 0 0"/>
+<mass value="0.060475658581603586317" />
+<inertia ixx="0.00012144759880165811091" ixy="-6.7416960237522373133e-21"  ixz="0" iyy="0.00012144759880165800249" iyz="4.6660264624929403019e-35" izz="0.00023659564983439910785" />
+</inertial>
+</link>
+
+<link name="link_arm1_top_mount">
+<visual>
+<origin xyz="-2.3828835793437974644e-08 -7.7936529123828757193e-06 -0.015000000000000013323" rpy="0 -0 1.0680181539507714832e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1_top_mount.stl"/>
+</geometry>
+<material name="link_arm1_top_mount_material">
+<color rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-2.3828835793437974644e-08 -7.7936529123828757193e-06 -0.015000000000000013323" rpy="0 -0 1.0680181539507714832e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm1_top_mount.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="1.4378696666169252801e-10 4.7028134971059242647e-08 -0.0075000000000000136002" rpy="0 0 0"/>
+<mass value="0.24404755337625547162" />
+<inertia ixx="0.0002655499667277153638" ixy="2.7510661027997182977e-16"  ixz="0" iyy="0.00026554996681770273465" iyz="0" izz="0.00052194815029380859164" />
+</inertial>
+</link>
+
+<link name="link_arm2">
+<visual>
+<origin xyz="0.16170000000000001039 0 0" rpy="3.141592653589793116 1.9721522630525290756e-31 9.5219797823659113582e-31" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm2.stl"/>
+</geometry>
+<material name="link_arm2_material">
+<color rgba="0.19607843137254901689 0.43921568627450979783 0.078431372549019606755 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.16170000000000001039 0 0" rpy="3.141592653589793116 1.9721522630525290756e-31 9.5219797823659113582e-31" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm2.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.0070071560830908541373 -2.9366485177732718797e-19 -0.032046723511373838289" rpy="0 0 0"/>
+<mass value="0.2521046695326249476" />
+<inertia ixx="0.00058788852463160839925" ixy="4.4933226750299111104e-20"  ixz="-4.4024229691094077048e-05" iyy="0.00040472252649839359417" iyz="-4.191978250528308642e-35" izz="0.00067793839878907326962" />
+</inertial>
+</link>
+
+<link name="link_arm3">
+<visual>
+<origin xyz="0.25509999999999999343 0.32916826553344719075 -0.033300000000000093414" rpy="1.570796326794896558 -8.2428688193495407456e-18 -5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm3.stl"/>
+</geometry>
+<material name="link_arm3_material">
+<color rgba="0 0.35686274509803922461 0.32941176470588234837 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.25509999999999999343 0.32916826553344719075 -0.033300000000000093414" rpy="1.570796326794896558 -8.2428688193495407456e-18 -5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm3.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="2.2204460492503130808e-16 0.064550407698123979383 -0.025000000000000070777" rpy="0 0 0"/>
+<mass value="0.12431354679013274789" />
+<inertia ixx="0.00031684724085741304512" ixy="-2.5687314900064676115e-20"  ixz="-1.5775851533978060492e-20" iyy="7.2947143195453193983e-05" iyz="1.306327536750304737e-20" izz="0.00029894005134427570824" />
+</inertial>
+</link>
+
+<link name="link_arm4">
+<visual>
+<origin xyz="0.20099999999999998423 -0.23399999999999993028 -0.24900000000000005462" rpy="-1.570796326794896558 7.1347324311582933715e-18 -5.5511151231257827021e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm4.stl"/>
+</geometry>
+<material name="link_arm4_material">
+<color rgba="0.14117647058823529216 0.6941176470588235059 0.65098039215686276382 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.20099999999999998423 -0.23399999999999993028 -0.24900000000000005462" rpy="-1.570796326794896558 7.1347324311582933715e-18 -5.5511151231257827021e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm4.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 -0.084999999999999936717 -0.015000000000000084446" rpy="0 0 0"/>
+<mass value="0.12168204910675756159" />
+<inertia ixx="0.00041405059351792020345" ixy="-2.2984425114165330153e-20"  ixz="2.0837050571829986369e-20" iyy="2.65985492948486828e-05" iyz="1.0180550114122810527e-20" izz="0.00041438478586950451728" />
+</inertial>
+</link>
+
+<link name="link_wrist_mid">
+<visual>
+<origin xyz="-0.058799999999999963407 0.012500000000000011102 0.016000000000000014211" rpy="1.570796326794896558 1.570796326794896336 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_mid.stl"/>
+</geometry>
+<material name="link_wrist_mid_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.058799999999999963407 0.012500000000000011102 0.016000000000000014211" rpy="1.570796326794896558 1.570796326794896336 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_mid.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="3.5104411915449342481e-17 0.0051151343140878827859 0.01600000000000002115" rpy="0 0 0"/>
+<mass value="0.025315413537536853722" />
+<inertia ixx="7.864055029639285455e-06" ixy="-8.4654521520664855803e-23"  ixz="-1.3279382485420025257e-21" iyy="9.3890553159420558888e-06" iyz="2.4153227458552780771e-21" izz="8.0187605486312146981e-06" />
+</inertial>
+</link>
+
+<link name="link_wrist_base_bearing">
+<visual>
+<origin xyz="-5.5511151231257827021e-17 -2.7755575615628913511e-17 0.005000000000000059952" rpy="3.141592653589793116 5.5511151231257839347e-17 -5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_base_bearing.stl"/>
+</geometry>
+<material name="link_wrist_base_bearing_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-5.5511151231257827021e-17 -2.7755575615628913511e-17 0.005000000000000059952" rpy="3.141592653589793116 5.5511151231257839347e-17 -5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_base_bearing.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-5.3449969326784905421e-17 -2.8707687169804345526e-17 5.9847959921199844757e-17" rpy="0 0 0"/>
+<mass value="0.0023389497908041689996" />
+<inertia ixx="3.3473362730383538521e-07" ixy="-1.8581449007450700229e-23"  ixz="-5.3580383763024616167e-23" iyy="3.3473362730383517345e-07" iyz="-6.9997869511147825999e-23" izz="6.3048475809426790435e-07" />
+</inertial>
+</link>
+
+<link name="link_wrist_base">
+<visual>
+<origin xyz="2.2204460492503130808e-16 0 -0.025000000000000077716" rpy="5.5511151231257827021e-17 -2.7755575615628919674e-17 -5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_base.stl"/>
+</geometry>
+<material name="link_wrist_base_material">
+<color rgba="0.2313725490196078538 0.38039215686274507888 0.7058823529411765163 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="2.2204460492503130808e-16 0 -0.025000000000000077716" rpy="5.5511151231257827021e-17 -2.7755575615628919674e-17 -5.5511151231257839347e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="2.2064705764470581767e-16 1.6749652621199870735e-18 -0.011821527754878843539" rpy="0 0 0"/>
+<mass value="0.01299711733361526636" />
+<inertia ixx="2.7433540531637974806e-06" ixy="-4.5686022517817920135e-22"  ixz="-5.4316774396845677412e-22" iyy="2.7433540531637983276e-06" iyz="1.5228674172605973378e-22" izz="4.4626068895703836816e-06" />
+</inertial>
+</link>
+
+<link name="link_wrist_end">
+<visual>
+<origin xyz="-5.5511151231257827021e-17 -0.058799999999999963407 -0.062700000000000033484" rpy="-2.7755575615628913511e-17 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_end.stl"/>
+</geometry>
+<material name="link_wrist_end_material">
+<color rgba="0.08627450980392156743 0.32156862745098041545 0.5803921568627451455 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-5.5511151231257827021e-17 -0.058799999999999963407 -0.062700000000000033484" rpy="-2.7755575615628913511e-17 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wrist_end.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-7.0276911513008056535e-17 -1.0943238011908624575e-17 0.026232074734683308304" rpy="0 0 0"/>
+<mass value="0.017319283609535648938" />
+<inertia ixx="4.8738112711665619847e-06" ixy="2.7507330740152229935e-12"  ixz="-7.6348179834240886651e-29" iyy="6.3813706712216062902e-06" iyz="5.2673524620037363826e-22" izz="6.3397519848272201569e-06" />
+</inertial>
+</link>
+
+<link name="link_arm_wrist2">
+<visual>
+<origin xyz="-0.0081956442445518251638 -0.0075000000000000621725 5.5511151231257827021e-17" rpy="-1.57079632679489678 -1.570796326794896336 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm_wrist2.stl"/>
+</geometry>
+<material name="link_arm_wrist2_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0081956442445518251638 -0.0075000000000000621725 5.5511151231257827021e-17" rpy="-1.57079632679489678 -1.570796326794896336 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_arm_wrist2.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.016871896339813962501 -6.5919492087118669588e-17 -0.013174576908349939011" rpy="0 0 0"/>
+<mass value="0.0076395059073011539058" />
+<inertia ixx="9.9049260207194373556e-07" ixy="-3.0630797409723642567e-22"  ixz="-3.3598045264685173309e-22" iyy="3.0417224068398418443e-06" iyz="-4.5896522826507144922e-23" izz="2.3476594558161573007e-06" />
+</inertial>
+</link>
+
+<link name="link_armlast">
+<visual>
+<origin xyz="-5.5511151231257827021e-17 -5.5511151231257827021e-17 0.010000000000000064393" rpy="-3.141592653589793116 1.1102230246251565404e-16 -2.7755575615628913511e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_armlast.stl"/>
+</geometry>
+<material name="link_armlast_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-5.5511151231257827021e-17 -5.5511151231257827021e-17 0.010000000000000064393" rpy="-3.141592653589793116 1.1102230246251565404e-16 -2.7755575615628913511e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_armlast.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-5.6120695287082826039e-17 -5.6586274109094295011e-17 0.0050000000000000642889" rpy="0 0 0"/>
+<mass value="0.023029890215175794627" />
+<inertia ixx="3.9323633187538940061e-06" ixy="-1.0914500744179916908e-22"  ixz="-4.3658002976719667633e-22" iyy="3.9323633187538948531e-06" iyz="-6.668286910858981915e-22" izz="7.4808951339215242534e-06" />
+</inertial>
+</link>
+
+<link name="link_armlast2">
+<visual>
+<origin xyz="5.5511151231257827021e-17 -0.024600000000000066258 -0.010000000000000008882" rpy="4.1633363423443376429e-17 -0 -2.7755575615628913511e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_armlast2.stl"/>
+</geometry>
+<material name="link_armlast2_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="5.5511151231257827021e-17 -0.024600000000000066258 -0.010000000000000008882" rpy="4.1633363423443376429e-17 -0 -2.7755575615628913511e-17" />
+<geometry>
+<mesh filename="package://nashbot/description/link_armlast2.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="5.2725570047167508158e-17 -7.292777493006496877e-17 -0.0050000000000000079103" rpy="0 0 0"/>
+<mass value="0.023029890215175794627" />
+<inertia ixx="3.9323633187538940061e-06" ixy="-5.4572503720899570435e-22"  ixz="8.3054620224859692161e-22" iyy="3.932363318753891465e-06" iyz="5.9899235881624067891e-23" izz="7.4808951339215225593e-06" />
+</inertial>
+</link>
+
+<joint name="arm_wrist2_mount" type="fixed">
+<origin xyz="-5.5511151231257827021e-17 -8.3266726846886740532e-17 0.015000000000000068834" rpy="3.1415926535897917837 -0 3.3306690738754720865e-16" />
+<parent link="link_armlast" />
+<child link="link_armlast2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_wrist3" type="revolute">
+<origin xyz="0.041264886036515013856 -1.1102230246251565404e-16 -0.013174576908349888704" rpy="-1.5707963267948934494 -1.3594921570126590193 -1.5707963267948779063" />
+<parent link="link_arm_wrist2" />
+<child link="link_armlast" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_wrist2" type="revolute">
+<origin xyz="0.015999999999999847677 0 0.034299999999999830624" rpy="-1.5707963267949154318 -1.5412222261540717838 -1.570796326794483555" />
+<parent link="link_wrist_end" />
+<child link="link_arm_wrist2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-1.2217304763960306069" upper="1.2217304763960306069"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_wrist_fix_mount" type="fixed">
+<origin xyz="1.6653345369377348106e-16 0 -0.018200000000000049472" rpy="-3.1415926535897904515 -1.1657341758564118036e-15 -1.5707963267948974462" />
+<parent link="link_wrist_base" />
+<child link="link_wrist_end" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_wrist1" type="revolute">
+<origin xyz="-5.5511151231257827021e-17 0 1.6653345369377348106e-16" rpy="3.1415926535897895633 -1.1102230246251612243e-16 -2.4609741910012123967" />
+<parent link="link_wrist_base_bearing" />
+<child link="link_wrist_base" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_wrist_bearing_mount" type="revolute">
+<origin xyz="-1.1102230246251565404e-16 0.023400000000000031886 0.016000000000000041966" rpy="1.570796326794896336 -0.45412831300399308931 -3.1415926535897904515" />
+<parent link="link_wrist_mid" />
+<child link="link_wrist_base_bearing" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-3.141592653589793116" upper="3.141592653589793116"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link3_fix_wrist" type="fixed">
+<origin xyz="-5.5511151231257827021e-17 -0.16999999999999998446 -4.1633363423443370266e-17" rpy="-3.1415926535897806815 -1.5939872126258999345e-16 2.7755575615628169023e-16" />
+<parent link="link_arm4" />
+<child link="link_wrist_mid" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link2" type="revolute">
+<origin xyz="8.066464163292152989e-17 0.13846826553344721011 -0.041000000000000161315" rpy="3.1415926535897913396 9.1972345972029474466e-15 -1.3852139784755002072" />
+<parent link="link_arm3" />
+<child link="link_arm4" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-1.7453292519943295336" upper="2.4434609527920612138"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="link1.5" type="revolute">
+<origin xyz="-0.043380152669139998567 -0.020000000000000045519 -0.066448956727981622894" rpy="-1.5707963267948976682 -0.81088336103405489474 -3.1415926535897891192" />
+<parent link="link_arm2" />
+<child link="link_arm3" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-1.7453292519943295336" upper="1.0471975511965976313"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_link2_mount2" type="fixed">
+<origin xyz="0 -2.7755575615628913511e-17 -0.015000000000000013323" rpy="-5.2284285563078351932e-17 6.3131392702426513487e-17 -3.1415926535897926719" />
+<parent link="link_arm1_top_mount" />
+<child link="link_arm2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_base_mount" type="fixed">
+<origin xyz="-1.0130785099704553431e-15 -5.5511151231257827021e-17 -0.024999999999999966693" rpy="2.4768215088350958508e-17 1.5777218104419826228e-30 -1.5707963267948972241" />
+<parent link="link_arm1_bearing" />
+<child link="link_arm1_top_mount" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_base1" type="revolute">
+<origin xyz="-0.067724570631980868241 -3.6429192995512948983e-17 0.0065000000000000335287" rpy="1.5626452826491723369e-15 5.9797388244350604472e-16 -2.1628522376395276083" />
+<parent link="link_arm1_base" />
+<child link="link_arm1_bearing" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-2.0943951023931952626" upper="2.0943951023931952626"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_link2_mount" type="fixed">
+<origin xyz="0.067724570631980868241 1.7347234759768070944e-18 -0.025000000000000022204" rpy="1.110223223148592793e-16 8.628166150854805674e-32 2.0272338594620006054e-30" />
+<parent link="link_arm1" />
+<child link="link_arm1_base" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_bearing_mount" type="fixed">
+<origin xyz="0.035003417238566127134 -0.080546758170579296765 0" rpy="-3.141592653589793116 1.7256332301709504061e-31 1.570796326794896558" />
+<parent link="link_arm_mount_base" />
+<child link="link_arm1" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="link_base">
+<visual>
+<origin xyz="8.6736173798840354721e-19 0.21544027328491210938 -0.040000000000000000833" rpy="0 -1.5407439555097886824e-33 1.1555579666323338143e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_base.stl"/>
+</geometry>
+<material name="link_base_material">
+<color rgba="0.90196078431372550543 0.87843137254901959565 0.81176470588235294379 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="8.6736173798840354721e-19 0.21544027328491210938 -0.040000000000000000833" rpy="0 -1.5407439555097886824e-33 1.1555579666323338143e-33" />
+<geometry>
+<mesh filename="package://nashbot/description/link_base.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.0025929182775735149999 0.21461487351882460595 -0.019693145491013381437" rpy="0 0 0"/>
+<mass value="6.9241979448356403282" />
+<inertia ixx="0.15317371308121471851" ixy="0.00026141418817127225292"  ixz="-5.9672159842113582027e-07" iyy="0.14817521999467028748" iyz="-7.1120897181415462234e-07" izz="0.29927189175921448117" />
+</inertial>
+</link>
+
+<link name="link_lidar_pole_mount">
+<visual>
+<origin xyz="0 0 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lidar_pole_mount.stl"/>
+</geometry>
+<material name="link_lidar_pole_mount_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="3.141592653589793116 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lidar_pole_mount.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-2.6596614645950761366e-19 -2.9258108851844994997e-18 -0.024999999999999997918" rpy="0 0 0"/>
+<mass value="0.0049087385212340526111" />
+<inertia ixx="1.0533334743481403072e-06" ixy="2.9212509307138273085e-38"  ixz="0" iyy="1.0533334743481403072e-06" iyz="0" izz="6.135923151542562776e-08" />
+</inertial>
+</link>
+
+<link name="link_lidar_base_mount">
+<visual>
+<origin xyz="-0.00023304969072342543446 -0.06782839000225068804 -0.009999999999999995004" rpy="0 3.4211388289180104271e-49 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lidar_base_mount.stl"/>
+</geometry>
+<material name="link_lidar_base_mount_material">
+<color rgba="0.19607843137254901689 0.43921568627450979783 0.078431372549019606755 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.00023304969072342543446 -0.06782839000225068804 -0.009999999999999995004" rpy="0 3.4211388289180104271e-49 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lidar_base_mount.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-9.053088140253962024e-18 -1.3877787807814456755e-17 -0.0049999999999999948999" rpy="0 0 0"/>
+<mass value="0.12500000000000002776" />
+<inertia ixx="0.00010520833333333332016" ixy="-4.2956262467936565252e-36"  ixz="-3.5993231429241563529e-53" iyy="0.00010520833333333334727" iyz="0" izz="0.00020833333333333334671" />
+</inertial>
+</link>
+
+<link name="link_lidar">
+<visual>
+<origin xyz="0 -3.4694469519536141888e-18 -0.040000000000000035527" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lidar.stl"/>
+</geometry>
+<material name="link_lidar_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 -3.4694469519536141888e-18 -0.040000000000000035527" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_lidar.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-8.7708866231685953244e-19 -7.1399165387206892957e-19 -0.020000000000000035111" rpy="0 0 0"/>
+<mass value="0.31808625617596653079" />
+<inertia ixx="0.00020344266801254528502" ixy="1.8023551009404287405e-35"  ixz="0" iyy="0.00020344266801254523081" iyz="0" izz="0.00032206233437816612734" />
+</inertial>
+</link>
+
+<joint name="lidar_base" type="fixed">
+<origin xyz="0 0 -0.0099999999999999672484" rpy="9.2981178312356308058e-16 2.775557561562880874e-17 -1.57079632679489678" />
+<parent link="link_lidar_base_mount" />
+<child link="link_lidar" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="lidar_plate" type="fixed">
+<origin xyz="0 0 -0.050000000000000002776" rpy="-9.7144514654698337666e-16 6.8755699014622677807e-32 7.2858385991024727e-17" />
+<parent link="link_lidar_pole_mount" />
+<child link="link_lidar_base_mount" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="lidar_mount" type="fixed">
+<origin xyz="0.0037285491515770411222 0.24401362636184925625 0" rpy="-3.1415926535897922278 1.3877787807814401289e-17 1.3877787807814435185e-17" />
+<parent link="link_base" />
+<child link="link_lidar_pole_mount" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="link_camera_pole">
+<visual>
+<origin xyz="0 0 0" rpy="3.141592653589793116 -0 7.7037197775487757764e-34" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera_pole.stl"/>
+</geometry>
+<material name="link_camera_pole_material">
+<color rgba="0.047058823529411764053 0.47058823529411764053 0.43529411764705883137 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="3.141592653589793116 -0 7.7037197775487757764e-34" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera_pole.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-8.6895599421206154125e-19 -1.1332899522663488711e-18 -0.19999999999999998335" rpy="0 0 0"/>
+<mass value="0.15707963267948968356" />
+<inertia ixx="0.002098322093210182749" ixy="-6.4659541636568506617e-35"  ixz="0" iyy="0.002098322093210182749" iyz="-4.8403898916924359354e-38" izz="7.8539816339744905176e-06" />
+</inertial>
+</link>
+
+<link name="link_camera_servo1">
+<visual>
+<origin xyz="-0.038404866796954761909 0.0050000000000000001041 -0.061967622488737106323" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera_servo1.stl"/>
+</geometry>
+<material name="link_camera_servo1_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.038404866796954761909 0.0050000000000000001041 -0.061967622488737106323" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera_servo1.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.005531869657899125825 0 -0.0076559257720910725564" rpy="0 0 0"/>
+<mass value="0.0031040514451390215957" />
+<inertia ixx="8.3234670146980132766e-08" ixy="3.4622262357068703335e-36"  ixz="2.6774338660596833796e-09" iyy="1.3095099196449408934e-07" iyz="-1.6187231168523716084e-37" izz="1.0058054508357338887e-07" />
+</inertial>
+</link>
+
+<link name="link_camera_servo2">
+<visual>
+<origin xyz="-0.0006048667969547408263 0.0050000000000001154632 -0.061967622488737106323" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera_servo2.stl"/>
+</geometry>
+<material name="link_camera_servo2_material">
+<color rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0006048667969547408263 0.0050000000000001154632 -0.061967622488737106323" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera_servo2.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.0055318696578990980695 1.1622647289044607533e-16 -0.0076559257720910725564" rpy="0 0 0"/>
+<mass value="0.0031040514451390215957" />
+<inertia ixx="8.3234670146980159236e-08" ixy="2.5576780277937545202e-26"  ixz="2.677433866059682966e-09" iyy="1.3095099196449406288e-07" iyz="1.2559377407435970818e-24" izz="1.0058054508357337563e-07" />
+</inertial>
+</link>
+
+<link name="link_camera">
+<visual>
+<origin xyz="0.035000000000000003331 -0.012000000000000066169 -0.024999999999999994449" rpy="-2.7755575615628913511e-17 1.4845213134904354474e-17 -2.7350958769985757155e-18" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera.stl"/>
+</geometry>
+<material name="link_camera_material">
+<color rgba="0.34901960784313723618 0.37647058823529411242 0.4000000000000000222 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.035000000000000003331 -0.012000000000000066169 -0.024999999999999994449" rpy="-2.7755575615628913511e-17 1.4845213134904354474e-17 -2.7350958769985757155e-18" />
+<geometry>
+<mesh filename="package://nashbot/description/link_camera.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="6.9388939039072283776e-18 -6.9640155378572689622e-17 -0.012499999999999993755" rpy="0 0 0"/>
+<mass value="0.38900054186990395966" />
+<inertia ixx="3.8154949126898210759e-05" ixy="6.1489496330894238962e-22"  ixz="4.0872263266589556595e-22" iyy="0.00025036725930444205098" iyz="-1.3832506749957487835e-20" izz="0.00024800131865322530642" />
+</inertial>
+</link>
+
+<joint name="camera_pole" type="fixed">
+<origin xyz="-0.013887045648916858387 5.5511151231257827021e-17 -0.0075000000000000049266" rpy="-3.1415926535897917837 -1.5707963267948943376 0" />
+<parent link="link_camera_servo2" />
+<child link="link_camera" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="camera_mount2" type="revolute">
+<origin xyz="-0.0053870456489168022651 0.0049999999999999740832 -0.0075000000000002842171" rpy="1.570796326794896558 -0.25065267009427094624 -1.83260399496375333e-15" />
+<parent link="link_camera_servo1" />
+<child link="link_camera_servo2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-0.52359877559829881566" upper="1.570796326794896558"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="camera_mount1" type="revolute">
+<origin xyz="1.3877787807814456755e-17 2.7755575615628913511e-17 -0.4000000000000000222" rpy="7.9969164658563554825e-15 -2.2107962561891007614e-15 -1.3373694162135525421" />
+<parent link="link_camera_pole" />
+<child link="link_camera_servo1" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" lower="-1.570796326794896558" upper="1.570796326794896558"/>
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="camera_mount" type="fixed">
+<origin xyz="0.0037285491515770341833 0.31121362636184918271 0" rpy="-3.141592653589793116 1.6640034719505514144e-31 -1.387778780781409468e-17" />
+<parent link="link_base" />
+<child link="link_camera_pole" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="link_wheels">
+<visual>
+<origin xyz="0 0 -0.024999999999999966693" rpy="-1.570796326794896558 -1.232595164407830946e-31 -6.9388939039072283776e-18" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wheels.stl"/>
+</geometry>
+<material name="link_wheels_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 -0.024999999999999966693" rpy="-1.570796326794896558 -1.232595164407830946e-31 -6.9388939039072283776e-18" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wheels.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-1.7429912632529263056e-18 4.0728523192345729422e-18 -0.012499999999999964265" rpy="0 0 0"/>
+<mass value="0.20449411980379361697" />
+<inertia ixx="0.00013973764853259228744" ixy="-9.6962471754913548028e-22"  ixz="2.3339858831586061826e-35" iyy="0.00013973764853259234165" iyz="-1.1951547381413731984e-52" izz="0.00025817382625228945704" />
+</inertial>
+</link>
+
+<joint name="wheel1_right" type="revolute">
+<origin xyz="-0.24999999999999991673 0.21551037962490227073 -0.061455325186252587888" rpy="-1.570796326794896558 -0.040746602626920307155 -1.5707963267949009989" />
+<parent link="link_base" />
+<child link="link_wheels" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="link_wheels_2">
+<visual>
+<origin xyz="1.7347234759768070944e-18 0 -0.025000000000000022204" rpy="-1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wheels.stl"/>
+</geometry>
+<material name="link_wheels_material">
+<color rgba="0 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="1.7347234759768070944e-18 0 -0.025000000000000022204" rpy="-1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="package://nashbot/description/link_wheels.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-8.2677872761201742017e-21 4.0728523192345729422e-18 -0.012500000000000019776" rpy="0 0 0"/>
+<mass value="0.20449411980379361697" />
+<inertia ixx="0.00013973764853259228744" ixy="-1.5513995480786173703e-20"  ixz="-2.386678573614333034e-36" iyy="0.00013973764853259234165" iyz="3.3408183172391609813e-34" izz="0.00025817382625228945704" />
+</inertial>
+</link>
+
+<joint name="wheel2_left" type="revolute">
+<origin xyz="0.24999999999999986122 0.21551037962490224298 -0.061455325186252726666" rpy="-1.570796326794896558 1.201710438508162504 1.5707963267949349717" />
+<parent link="link_base" />
+<child link="link_wheels_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="caster">
+<visual>
+<origin xyz="-0.066161920000000290498 -0.010337799999999980338 -0.0025844500000000020234" rpy="1.570796326794896558 1.1067045288720792919e-19 -1.8629785820548136236e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+<material name="t_2-3_bracket_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.066161920000000290498 -0.010337799999999980338 -0.0025844500000000020234" rpy="1.570796326794896558 1.1067045288720792919e-19 -1.8629785820548136236e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.040317419999999423719 0.0012922249999996748837 -0.038766749999999690346" rpy="1.570796326794896558 -1.4282044679336228367e-14 -1.2247147740396189061e-15" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-6_pin.stl"/>
+</geometry>
+<material name="t_2-6_pin_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.040317419999999423719 0.0012922249999996748837 -0.038766749999999690346" rpy="1.570796326794896558 -1.4282044679336228367e-14 -1.2247147740396189061e-15" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-6_pin.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.066161920000000262743 0.010337800000000008094 -0.0025844500000000020234" rpy="1.570796326794896558 1.1067045288720792919e-19 -1.8629785820548136236e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+<material name="t_2-3_bracket_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.066161920000000262743 0.010337800000000008094 -0.0025844500000000020234" rpy="1.570796326794896558 1.1067045288720792919e-19 -1.8629785820548136236e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0 0 -0.0012922250000000044812" rpy="1.570796326794896558 -0 -8.6736173799026649924e-19" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-2_mouting_plate.stl"/>
+</geometry>
+<material name="t_2-2_mouting_plate_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 -0.0012922250000000044812" rpy="1.570796326794896558 -0 -8.6736173799026649924e-19" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-2_mouting_plate.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.040317420000000311897 0.0012922249999997303949 -0.038766749999999718101" rpy="1.570796326794896558 -0.95510637754868399352 -7.0201712412942359821e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-4_wheel.stl"/>
+</geometry>
+<material name="t_2-4_wheel_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.040317420000000311897 0.0012922249999997303949 -0.038766749999999718101" rpy="1.570796326794896558 -0.95510637754868399352 -7.0201712412942359821e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-4_wheel.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.040317420000000311897 0.0012922249999997303949 -0.038766749999999718101" rpy="2.1864862760410970211 1.8264322022051875711e-19 1.5707963267948981123" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-5_tire.stl"/>
+</geometry>
+<material name="t_2-5_tire_material">
+<color rgba="0.30196078431372547213 0.30196078431372547213 0.30196078431372547213 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.040317420000000311897 0.0012922249999997303949 -0.038766749999999718101" rpy="2.1864862760410970211 1.8264322022051875711e-19 1.5707963267948981123" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-5_tire.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.031482429440245721097 0.00087821465043730632862 -0.031178833871392350185" rpy="0 0 0"/>
+<mass value="0.31235370666879530566" />
+<inertia ixx="0.00012960420213085229965" ixy="2.4235580780294921459e-06"  ixz="-6.0155906122903295705e-05" iyy="0.00025717036049778340496" iyz="2.0814685997139522292e-06" izz="0.00015404821946316660632" />
+</inertial>
+</link>
+
+<joint name="caster_base_mount" type="revolute">
+<origin xyz="-7.5460471204991108607e-17 0.43091411888599395752 -0.039999999999999931444" rpy="7.359732672286190388e-17 1.1896430072343872108e-14 0.0054475775093515916084" />
+<parent link="link_base" />
+<child link="caster" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="caster_2">
+<visual>
+<origin xyz="-0.066161919999999846409 -0.010337799999999886663 -0.0025844499999999846762" rpy="1.570796326794896558 1.1067045288193328856e-19 -1.4571677198205014425e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+<material name="t_2-3_bracket_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.066161919999999846409 -0.010337799999999886663 -0.0025844499999999846762" rpy="1.570796326794896558 1.1067045288193328856e-19 -1.4571677198205014425e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.04031741999999985393 0.0012922250000000968552 -0.038766749999999981779" rpy="-1.570796326794896558 1.2912649158070328426 -3.1415926535897904515" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-6_pin.stl"/>
+</geometry>
+<material name="t_2-6_pin_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.04031741999999985393 0.0012922250000000968552 -0.038766749999999981779" rpy="-1.570796326794896558 1.2912649158070328426 -3.1415926535897904515" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-6_pin.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.066161919999999790898 0.01033780000000037759 -0.0025844500000000020234" rpy="1.570796326794896558 1.1067045288193328856e-19 -1.4571677198205014425e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+<material name="t_2-3_bracket_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.066161919999999790898 0.01033780000000037759 -0.0025844500000000020234" rpy="1.570796326794896558 1.1067045288193328856e-19 -1.4571677198205014425e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-3_bracket.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="0 1.1655173354219172666e-18 -0.0012922249999999975423" rpy="1.570796326794896558 -0 1.8825832555410121124e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-2_mouting_plate.stl"/>
+</geometry>
+<material name="t_2-2_mouting_plate_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 1.1655173354219172666e-18 -0.0012922249999999975423" rpy="1.570796326794896558 -0 1.8825832555410121124e-30" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-2_mouting_plate.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.040317419999999909441 0.0012922250000001020594 -0.038766749999999981779" rpy="1.570796326794896558 -0.76137076468107189875 2.2561330177429404535e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-4_wheel.stl"/>
+</geometry>
+<material name="t_2-4_wheel_material">
+<color rgba="0.79607843137254896693 0.82352941176470584317 0.9372549019607843146 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.040317419999999909441 0.0012922250000001020594 -0.038766749999999981779" rpy="1.570796326794896558 -0.76137076468107189875 2.2561330177429404535e-16" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-4_wheel.stl"/>
+</geometry>
+</collision>
+<visual>
+<origin xyz="-0.040317419999999909441 0.0012922250000000985899 -0.038766749999999981779" rpy="2.380221888908714778 -6.2320011512460381043e-29 1.57079632679489678" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-5_tire.stl"/>
+</geometry>
+<material name="t_2-5_tire_material">
+<color rgba="0.30196078431372547213 0.30196078431372547213 0.30196078431372547213 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.040317419999999909441 0.0012922250000000985899 -0.038766749999999981779" rpy="2.380221888908714778 -6.2320011512460381043e-29 1.57079632679489678" />
+<geometry>
+<mesh filename="package://nashbot/description/t_2-5_tire.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-0.031482429440245457419 0.00087821465043760611052 -0.03117883387139257223" rpy="0 0 0"/>
+<mass value="0.31235370666879530566" />
+<inertia ixx="0.00012960420213085281464" ixy="2.423558078030162149e-06"  ixz="-6.0155906122902990773e-05" iyy="0.00025717036049778286286" iyz="2.0814685997145307527e-06" izz="0.00015404821946316766342" />
+</inertial>
+</link>
+
+<joint name="caster_base_mount2" type="revolute">
+<origin xyz="-3.4694469519536141888e-18 0 -0.040000000000000007772" rpy="6.4035790008945382877e-15 -2.119918668448466828e-16 1.6038573593312053234" />
+<parent link="link_base" />
+<child link="caster_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="arm_base_fixed" type="fixed">
+<origin xyz="0.035003417238566141012 -0.080546758170579296765 -0.009999999999999995004" rpy="3.3280069439011304169e-31 -3.2355623065705633491e-32 -5.0074178554068269025e-33" />
+<parent link="link_arm_mount_base" />
+<child link="link_base" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="slider_bearing" type="fixed">
+<origin xyz="-0.028031642234836617877 -0.13539226875249418813 0.082270123761849736632" rpy="8.3266726846886284472e-17 -1.3877787807814456755e-17 -1.3877787807814481407e-17" />
+<parent link="link_lead_screw" />
+<child link="link_arm_mount_base" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+
+</robot>

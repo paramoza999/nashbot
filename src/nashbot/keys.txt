@@ -1,0 +1,2 @@
+The API key's access key is d8I40eKIoiWWwm0Y2cCRvyAj and the secret key is xExbe325hmy9pv2WLGXPtkNFkVQccgLS6xkyqwAMUzPSJZ1z Please transfer this securely to your application now as you will not be able to display this secret key string again.
+
