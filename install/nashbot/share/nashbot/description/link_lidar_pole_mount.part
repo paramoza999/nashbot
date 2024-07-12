@@ -1,13 +1,1 @@
-{
-    "configuration": "default",
-    "documentId": "1a729157d32a9faa6e1b0b1e",
-    "documentMicroversion": "b25dd46e31bf647077afdf14",
-    "elementId": "2cc34fff088ce1876dce9cf3",
-    "fullConfiguration": "default",
-    "id": "Mdm++IHc4RbFRGLso",
-    "isStandardContent": false,
-    "name": "link_lidar_pole_mount <11>",
-    "partId": "JHD",
-    "suppressed": false,
-    "type": "Part"
-}
+/home/param/nash_ws/src/nashbot/description/link_lidar_pole_mount.part

@@ -1,13 +1,1 @@
-{
-    "configuration": "default",
-    "documentId": "1a729157d32a9faa6e1b0b1e",
-    "documentMicroversion": "b25dd46e31bf647077afdf14",
-    "elementId": "2261f84f098ca023f3bde605",
-    "fullConfiguration": "default",
-    "id": "MS9wL4orzlb+rjuh0",
-    "isStandardContent": false,
-    "name": "link_lead_screw <6>",
-    "partId": "JHD",
-    "suppressed": false,
-    "type": "Part"
-}
+/home/param/nash_ws/src/nashbot/description/link_lead_screw.part

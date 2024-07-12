@@ -1,13 +1,1 @@
-{
-    "configuration": "default",
-    "documentId": "1a729157d32a9faa6e1b0b1e",
-    "documentMicroversion": "b25dd46e31bf647077afdf14",
-    "elementId": "1bbd2883ab52a68915158256",
-    "fullConfiguration": "default",
-    "id": "Mgoe/7wXqGmYOfzh5",
-    "isStandardContent": false,
-    "name": "T 2-4 Wheel <1>",
-    "partId": "JFL",
-    "suppressed": false,
-    "type": "Part"
-}
+/home/param/nash_ws/src/nashbot/description/t_2-4_wheel.part

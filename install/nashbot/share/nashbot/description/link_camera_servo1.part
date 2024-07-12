@@ -1,13 +1,1 @@
-{
-    "configuration": "default",
-    "documentId": "1a729157d32a9faa6e1b0b1e",
-    "documentMicroversion": "b25dd46e31bf647077afdf14",
-    "elementId": "fee4dc0df834b1dc30fab90b",
-    "fullConfiguration": "default",
-    "id": "M9bEBkVA3wTkWlp5Z",
-    "isStandardContent": false,
-    "name": "link_camera_servo1 <2>",
-    "partId": "JID",
-    "suppressed": false,
-    "type": "Part"
-}
+/home/param/nash_ws/src/nashbot/description/link_camera_servo1.part

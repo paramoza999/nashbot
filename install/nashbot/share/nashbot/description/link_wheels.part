@@ -1,13 +1,1 @@
-{
-    "configuration": "default",
-    "documentId": "1a729157d32a9faa6e1b0b1e",
-    "documentMicroversion": "b25dd46e31bf647077afdf14",
-    "elementId": "3e50a662997c5e457a6eda2e",
-    "fullConfiguration": "default",
-    "id": "MR5dmPszyqaH/6ZGg",
-    "isStandardContent": false,
-    "name": "link_wheels <2>",
-    "partId": "JHD",
-    "suppressed": false,
-    "type": "Part"
-}
+/home/param/nash_ws/src/nashbot/description/link_wheels.part
