@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: nashbot
+    relative_path: description/robot.urdf
+  srdf:
+    relative_path: config/nashbot.srdf
+  package_settings:
+    author_name: Param Oza
+    author_email: oza.param1@gmail.com
+    generated_timestamp: 1721597991

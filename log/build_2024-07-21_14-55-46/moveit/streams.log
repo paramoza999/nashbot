@@ -1,0 +1,5 @@
+[0.013s] Invoking command in '/home/param/nash_ws/build/moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/param/nash_ws/build/moveit -- -j32 -l32
+[0.031s] [0mCMake Error: The source directory "/home/param/nash_ws/src/nashbot" does not appear to contain CMakeLists.txt.
+[0.031s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.032s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.033s] Invoked command in '/home/param/nash_ws/build/moveit' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/param/nash_ws/build/moveit -- -j32 -l32

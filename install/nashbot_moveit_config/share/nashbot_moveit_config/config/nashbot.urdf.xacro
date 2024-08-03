@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="nashbot">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import nashbot urdf file -->
+    <xacro:include filename="/home/param/nash_ws/src/nashbot_moveit_config/description/robot.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="nashbot.ros2_control.xacro" />
+
+
+    <xacro:nashbot_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

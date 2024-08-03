@@ -1,0 +1,128 @@
+[0.010s] Invoking command in '/home/param/nash_ws/src/nashbot/build/nashbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/param/nash_ws/src/nashbot -DCMAKE_INSTALL_PREFIX=/home/param/nash_ws/src/nashbot/install/nashbot
+[0.248s] -- The C compiler identification is GNU 11.4.0
+[0.393s] -- The CXX compiler identification is GNU 11.4.0
+[0.407s] -- Detecting C compiler ABI info
+[0.473s] -- Detecting C compiler ABI info - done
+[0.478s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.479s] -- Detecting C compile features
+[0.479s] -- Detecting C compile features - done
+[0.483s] -- Detecting CXX compiler ABI info
+[0.556s] -- Detecting CXX compiler ABI info - done
+[0.562s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.562s] -- Detecting CXX compile features
+[0.563s] -- Detecting CXX compile features - done
+[0.570s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.707s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.834s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.926s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.926s] -- Configured cppcheck include dirs: 
+[0.926s] -- Configured cppcheck exclude dirs and/or files: 
+[0.927s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.929s] -- Added test 'lint_cmake' to check CMake code style
+[0.931s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.935s] -- Added test 'uncrustify' to check C / C++ code style
+[0.935s] -- Configured uncrustify additional arguments: 
+[0.937s] -- Added test 'xmllint' to check XML markup files
+[0.940s] -- Configuring done
+[0.942s] -- Generating done
+[0.943s] -- Build files have been written to: /home/param/nash_ws/src/nashbot/build/nashbot
+[0.946s] Invoked command in '/home/param/nash_ws/src/nashbot/build/nashbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake /home/param/nash_ws/src/nashbot -DCMAKE_INSTALL_PREFIX=/home/param/nash_ws/src/nashbot/install/nashbot
+[0.947s] Invoking command in '/home/param/nash_ws/src/nashbot/build/nashbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/param/nash_ws/src/nashbot/build/nashbot -- -j32 -l32
+[0.982s] Invoked command in '/home/param/nash_ws/src/nashbot/build/nashbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --build /home/param/nash_ws/src/nashbot/build/nashbot -- -j32 -l32
+[1.015s] Invoking command in '/home/param/nash_ws/src/nashbot/build/nashbot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/param/nash_ws/src/nashbot/build/nashbot
+[1.023s] -- Install configuration: ""
+[1.023s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description
+[1.023s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camservo_m1.part
+[1.023s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camera_mount.stl
+[1.023s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1_bearing.part
+[1.023s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_mid.part
+[1.023s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1_top_mount.stl
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1_base.stl
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm_wrist2.part
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_display.stl
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_servo_mg.part
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm_wrist2.stl
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_mid.stl
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1.stl
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm4.part
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camservo_m2.part
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wheel.part
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm_mount_base.stl
+[1.024s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/robot.urdf
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_motor_horn.part
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1_top_mount.part
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_lidar_pole_mount.part
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_motor_horn.stl
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_end.part
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_cam_v2.1_v1.part
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm2.stl
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_lidar_pole_mount.stl
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_base.part
+[1.025s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camera_pole.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/config.json
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_gripper.stl
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camservo_m2.stl
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_power_line_mount.stl
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_generic_mount.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camera.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_planetary_gear_motor.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_cam_v2.1_v1.stl
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_base_bearing.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_gripper.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_lidar.stl
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_armlast.part
+[1.026s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_servo_mg.stl
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm2.part
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_base.part
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm_mount_base.part
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camera_mount.part
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1_base.part
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_armlast.stl
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_display.part
+[1.027s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_planetary_gear_motor.stl
+[1.033s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wormgearmotor.part
+[1.033s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_armlast2.stl
+[1.034s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm1_bearing.stl
+[1.034s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wormgearmotor.stl
+[1.036s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_base.stl
+[1.036s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_armlast2.part
+[1.036s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_power_line_mount.part
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_lidar_base_mount.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camera_pole.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm3.part
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_motor_shaft_worm.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_generic_mount.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_base.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_motor_shaft_worm.part
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wheel.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_lidar.part
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm4.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_lidar_base_mount.part
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_arm3.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camera.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_base_bearing.stl
+[1.037s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_wrist_end.stl
+[1.038s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/link_camservo_m1.stl
+[1.038s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/robot
+[1.038s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/description/robot/robot.usd
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/launch
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/launch/l2.py
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/launch/l1.py
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/src
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/ament_index/resource_index/package_run_dependencies/nashbot
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/ament_index/resource_index/parent_prefix_path/nashbot
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/environment/ament_prefix_path.sh
+[1.054s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/environment/ament_prefix_path.dsv
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/environment/path.sh
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/environment/path.dsv
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/local_setup.bash
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/local_setup.sh
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/local_setup.zsh
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/local_setup.dsv
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/package.dsv
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/ament_index/resource_index/packages/nashbot
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/cmake/nashbotConfig.cmake
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/cmake/nashbotConfig-version.cmake
+[1.055s] -- Installing: /home/param/nash_ws/src/nashbot/install/nashbot/share/nashbot/package.xml
+[1.056s] Invoked command in '/home/param/nash_ws/src/nashbot/build/nashbot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/param/ws_moveit2/install/moveit_configs_utils:/home/param/ws_moveit2/install/launch_param_builder:/opt/ros/humble /usr/bin/cmake --install /home/param/nash_ws/src/nashbot/build/nashbot

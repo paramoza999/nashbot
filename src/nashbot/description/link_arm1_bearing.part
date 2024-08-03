@@ -1,12 +1,12 @@
 {
     "configuration": "default",
     "documentId": "1a729157d32a9faa6e1b0b1e",
-    "documentMicroversion": "bbc67298c4df1ac32ad08bef",
+    "documentMicroversion": "93420459fd7b85fc89ba2ee4",
     "elementId": "78c98daacf7e0093bb12526a",
     "fullConfiguration": "default",
-    "id": "Mg1v1/UhBaRahLrcK",
+    "id": "Mb+f8p6vuFQTaTRF0",
     "isStandardContent": false,
-    "name": "link_arm1_bearing <2>",
+    "name": "link_arm1_bearing <1>",
     "partId": "JND",
     "suppressed": false,
     "type": "Part"

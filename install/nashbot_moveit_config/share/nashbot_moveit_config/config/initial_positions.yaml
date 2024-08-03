@@ -1,0 +1,9 @@
+# Default initial positions for nashbot's ros2_control fake system
+
+initial_positions:
+  arm_base1: 0
+  arm_wrist1: 0
+  arm_wrist2: 0
+  arm_wrist3: 0
+  link1.5: 0
+  link2: 0

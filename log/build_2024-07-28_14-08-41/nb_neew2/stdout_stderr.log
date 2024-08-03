@@ -1,0 +1,42 @@
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/param/nash_ws/build/nb_neew2
+-- Install configuration: ""
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/ament_index/resource_index/package_run_dependencies/nb_neew2
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/ament_index/resource_index/parent_prefix_path/nb_neew2
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/environment/ament_prefix_path.sh
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/environment/path.sh
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/environment/path.dsv
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/local_setup.bash
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/local_setup.sh
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/local_setup.zsh
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/local_setup.dsv
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/package.dsv
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/ament_index/resource_index/packages/nb_neew2
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/cmake/nb_neew2Config.cmake
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/cmake/nb_neew2Config-version.cmake
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/package.xml
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/warehouse_db.launch.py
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/demo.launch.py
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/static_virtual_joint_tfs.launch.py
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/rsp.launch.py
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/setup_assistant.launch.py
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/spawn_controllers.launch.py
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/move_group.launch.py
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/launch/moveit_rviz.launch.py
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/moveit.rviz
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/nashbot.srdf
+-- Up-to-date: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/sensors_3d.yaml
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/kinematics.yaml
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/nashbot.ros2_control.xacro
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/initial_positions.yaml
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/joint_limits.yaml
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/ros2_controllers.yaml
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/nashbot.urdf.xacro
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/moveit_controllers.yaml
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/config/pilz_cartesian_limits.yaml
+-- Installing: /home/param/nash_ws/install/nb_neew2/share/nb_neew2/.setup_assistant

@@ -1,0 +1,4 @@
+source;share/nashbot_moveit_config/local_setup.bash
+source;share/nashbot_moveit_config/local_setup.dsv
+source;share/nashbot_moveit_config/local_setup.sh
+source;share/nashbot_moveit_config/local_setup.zsh

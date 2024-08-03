@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="nashbot">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="nb_arm">
+        <joint name="arm_base1"/>
+        <joint name="link1.5"/>
+        <joint name="link2"/>
+        <joint name="arm_wrist1"/>
+        <joint name="arm_wrist2"/>
+        <joint name="arm_wrist3"/>
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="home" group="nb_arm">
+        <joint name="arm_base1" value="0.4076"/>
+        <joint name="arm_wrist1" value="0.9488"/>
+        <joint name="arm_wrist2" value="1.1397"/>
+        <joint name="arm_wrist3" value="0"/>
+        <joint name="link1.5" value="1.0471"/>
+        <joint name="link2" value="0.9253"/>
+    </group_state>
+    <group_state name="forward_max" group="nb_arm">
+        <joint name="arm_base1" value="0.5482"/>
+        <joint name="arm_wrist1" value="0.9909"/>
+        <joint name="arm_wrist2" value="0"/>
+        <joint name="arm_wrist3" value="0"/>
+        <joint name="link1.5" value="-0.2835"/>
+        <joint name="link2" value="0.1382"/>
+    </group_state>
+    <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
+    <passive_joint name="arm_wrist_bearing_mount"/>
+    <passive_joint name="bl2_wheel"/>
+    <passive_joint name="br4_wheel"/>
+    <passive_joint name="fl1_wheel"/>
+    <passive_joint name="fr3_wheel"/>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="link_arm1" link2="link_arm1_base" reason="Adjacent"/>
+    <disable_collisions link1="link_arm1" link2="link_arm1_bearing" reason="Default"/>
+    <disable_collisions link1="link_arm1" link2="link_arm1_top_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_arm2" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_arm3" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_arm_mount_base" reason="Adjacent"/>
+    <disable_collisions link1="link_arm1" link2="link_base" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm1" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_arm1_bearing" reason="Adjacent"/>
+    <disable_collisions link1="link_arm1_base" link2="link_arm1_top_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_arm2" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_arm3" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_arm_mount_base" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_base" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm1_base" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_arm1_top_mount" reason="Adjacent"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_arm2" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_arm3" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_arm_mount_base" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_base" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm1_bearing" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_arm2" reason="Adjacent"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_arm_mount_base" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_base" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm1_top_mount" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_arm3" reason="Adjacent"/>
+    <disable_collisions link1="link_arm2" link2="link_arm_mount_base" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_base" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm2" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_arm4" reason="Adjacent"/>
+    <disable_collisions link1="link_arm3" link2="link_arm_wrist2" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_armlast" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_armlast2" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_arm3" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_arm_wrist2" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_armlast" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_armlast2" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_arm4" link2="link_wrist_mid" reason="Adjacent"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_base" reason="Adjacent"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_lead_screw" reason="Adjacent"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_lead_screw_2" reason="Adjacent"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm_mount_base" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_armlast" reason="Adjacent"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_armlast2" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_wrist_end" reason="Adjacent"/>
+    <disable_collisions link1="link_arm_wrist2" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_armlast2" reason="Adjacent"/>
+    <disable_collisions link1="link_armlast" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_armlast" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_armlast2" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_camera" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_camera_pole" reason="Adjacent"/>
+    <disable_collisions link1="link_base" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_base" link2="link_lidar_pole_mount" reason="Adjacent"/>
+    <disable_collisions link1="link_base" link2="link_wheel" reason="Adjacent"/>
+    <disable_collisions link1="link_base" link2="link_wheel_2" reason="Adjacent"/>
+    <disable_collisions link1="link_base" link2="link_wheel_3" reason="Adjacent"/>
+    <disable_collisions link1="link_base" link2="link_wheel_4" reason="Adjacent"/>
+    <disable_collisions link1="link_camera" link2="link_camera_pole" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_camera_servo1" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_camera_servo2" reason="Adjacent"/>
+    <disable_collisions link1="link_camera" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_camera" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_camera_servo1" reason="Adjacent"/>
+    <disable_collisions link1="link_camera_pole" link2="link_camera_servo2" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_camera_pole" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_camera_servo2" reason="Adjacent"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_camera_servo1" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_lead_screw" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_camera_servo2" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_lead_screw_2" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_lead_screw" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_lead_screw_2" link2="link_lidar" reason="Never"/>
+    <disable_collisions link1="link_lead_screw_2" link2="link_lidar_base_mount" reason="Never"/>
+    <disable_collisions link1="link_lead_screw_2" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_lead_screw_2" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_lead_screw_2" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_lead_screw_2" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_lead_screw_2" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_lidar_base_mount" reason="Adjacent"/>
+    <disable_collisions link1="link_lidar" link2="link_lidar_pole_mount" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_lidar" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_lidar_pole_mount" reason="Adjacent"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_lidar_base_mount" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wheel" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_lidar_pole_mount" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_wheel" link2="link_wheel_2" reason="Never"/>
+    <disable_collisions link1="link_wheel" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_wheel" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_wheel_2" link2="link_wheel_3" reason="Never"/>
+    <disable_collisions link1="link_wheel_2" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_wheel_2" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_wheel_2" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_wheel_2" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_wheel_3" link2="link_wheel_4" reason="Never"/>
+    <disable_collisions link1="link_wheel_3" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_wheel_3" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_wheel_3" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_wheel_3" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_wheel_4" link2="link_wrist_base" reason="Never"/>
+    <disable_collisions link1="link_wheel_4" link2="link_wrist_base_bearing" reason="Never"/>
+    <disable_collisions link1="link_wheel_4" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_wheel_4" link2="link_wrist_mid" reason="Never"/>
+    <disable_collisions link1="link_wrist_base" link2="link_wrist_base_bearing" reason="Adjacent"/>
+    <disable_collisions link1="link_wrist_base" link2="link_wrist_end" reason="Adjacent"/>
+    <disable_collisions link1="link_wrist_base" link2="link_wrist_mid" reason="Default"/>
+    <disable_collisions link1="link_wrist_base_bearing" link2="link_wrist_end" reason="Never"/>
+    <disable_collisions link1="link_wrist_base_bearing" link2="link_wrist_mid" reason="Adjacent"/>
+    <disable_collisions link1="link_wrist_end" link2="link_wrist_mid" reason="Never"/>
+</robot>

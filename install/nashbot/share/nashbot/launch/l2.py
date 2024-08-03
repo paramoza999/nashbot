@@ -1,0 +1,1 @@
+/home/param/nash_ws/src/nashbot/launch/l2.py

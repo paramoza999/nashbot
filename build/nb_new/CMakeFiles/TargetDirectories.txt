@@ -1,0 +1,9 @@
+/home/param/nash_ws/build/nb_new/CMakeFiles/uninstall.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/nb_new_uninstall.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/test.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/edit_cache.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/rebuild_cache.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/list_install_components.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/install.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/install/local.dir
+/home/param/nash_ws/build/nb_new/CMakeFiles/install/strip.dir

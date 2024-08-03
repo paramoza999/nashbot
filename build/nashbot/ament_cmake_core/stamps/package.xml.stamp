@@ -11,7 +11,12 @@
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
-
+  <depend>moveit_core</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_visual_tools</depend>
+  <depend>rviz2</depend>
+  <depend>xacro</depend>
+<depend>robot_state_publisher</depend>
   <export>
     <build_type>ament_cmake</build_type>
   </export>

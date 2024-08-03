@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "1a729157d32a9faa6e1b0b1e",
+    "documentMicroversion": "54b67f924f453fe95e7fffe8",
+    "elementId": "42e33b934fc361b79875eeab",
+    "fullConfiguration": "default",
+    "id": "M9cO2vN/sxJEGsdOV",
+    "isStandardContent": false,
+    "name": "link_motor_shaft_worm <1>",
+    "partId": "JFP",
+    "suppressed": false,
+    "type": "Part"
+}
